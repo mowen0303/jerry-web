@@ -8,7 +8,6 @@ function App() {
         <a
           className="App-link"
           href="/searchSuggestion"
-          target="_blank"
         >
           Search Suggestion - Amazon
         </a>
@@ -16,7 +15,6 @@ function App() {
         <a
           className="App-link"
           href="/totalSalary"
-          target="_blank"
         >
           total Salary - Scotiabnak
         </a>
