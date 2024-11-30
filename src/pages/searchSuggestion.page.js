@@ -25,16 +25,16 @@ export default function SearchSuggestionPage() {
     }
 
     function searchSuggestions(repository, customerQuery) {
-        if (customerQuery.length >= 2) {
-            const filteredResult = repository.filter(x=>{
-                return x.startsWith(customerQuery);
-            })
-            filteredResult.sort();
-            filteredResult.splice(3);
-            return filteredResult;
-        } else {
-            return [];
-        }
+
+        if(customerQuery.length < 2) return [];
+
+        customerQuery = customerQuery.toLowerCase();
+
+        const filteredResult = repository.filter(x=>{
+            return x.toLowerCase().startsWith(customerQuery);
+        })
+        filteredResult.sort();
+        return filteredResult.slice(0,3);
     }
 
     /**
@@ -97,7 +97,7 @@ export default function SearchSuggestionPage() {
                 />
                 <ul>
                     {
-                        result.map(x => <li>{x}</li>)
+                        result.map((x,index) => <li key={index}>{x}</li>)
                     }
                 </ul>
             </div>
