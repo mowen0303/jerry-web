@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import GlobalConfig from '../global';
 
 export default function SearchSuggestionPage() {
 

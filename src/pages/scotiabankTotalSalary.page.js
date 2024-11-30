@@ -1,10 +1,21 @@
 import { useState } from 'react';
+import GlobalConfig from '../global';
 
 export default function TotalSalaryPage() {
+
+    const currentFile = import.meta.url;
+    const currentFileName = currentFile.slice(currentFile.lastIndexOf('/')+1);
+
+     /**
+      * * * * * * * * * * * * * * * * * * * * 
+      *          Core code start            * 
+      * * * * * * * * * * * * * * * * * * * * 
+    */
 
     const [query, setQuery] = useState('');
     const [result, setResult] = useState("Please type into a UserId");
 
+    
 
     const e1 = {
         id: 1,
@@ -51,6 +62,14 @@ export default function TotalSalaryPage() {
         }
         setResult(result)
     }
+
+
+    /**
+      * * * * * * * * * * * * * * * * * * * * 
+      *          Core code end              * 
+      * * * * * * * * * * * * * * * * * * * * 
+    */
+
 
     return (
         <div className="pageContainer">
@@ -183,6 +202,7 @@ export default function TotalSalaryPage() {
             </div>
             <div className="answerContainer">
                 <h3>Algorithm solution: Recursion </h3>
+                <p><a target='_blank' href={GlobalConfig.GITHUB_URL+currentFileName}>View Source Code</a></p>
                 <p>Try to input a Number:</p>
                 <input
                     type='number'
