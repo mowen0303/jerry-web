@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Nav from './share/nav.component';
 
 //1. 导入新的文件
 import SearchSuggestionPage from './pages/searchSuggestion.page';
@@ -29,6 +30,16 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <div className='page-container'>
+      
+      <div className='nav-container'>
+        <Nav/>
+      </div>
+
+      <div className='content-container'>
+        <RouterProvider router={router}></RouterProvider>
+      </div>
+
+    </div>
   </React.StrictMode>
 );

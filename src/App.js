@@ -1,24 +1,10 @@
 import './App.css';
+import Nav from './share/nav.component';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <a
-          className="App-link"
-          href="/searchSuggestion"
-        >
-          Search Suggestion - Amazon
-        </a>
-
-        <a
-          className="App-link"
-          href="/totalSalary"
-        >
-          total Salary - Scotiabnak
-        </a>
-      </header>
+    <div className="page-container">
+      <div></div>
     </div>
   );
 }

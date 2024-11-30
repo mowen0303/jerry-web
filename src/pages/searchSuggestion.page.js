@@ -1,11 +1,11 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
-export default function SearchSuggestionPage(){
+export default function SearchSuggestionPage() {
 
     const [query, setQuery] = useState('');
     const [result, setResult] = useState([]);
-    const repository =  ["mobile", "mouse", "moneypot", "monitor", "mousepad"];
-    
+    const repository = ["mobile", "mouse", "moneypot", "monitor", "mousepad"];
+
 
     return (
         <div className="pageContainer">
@@ -29,17 +29,17 @@ export default function SearchSuggestionPage(){
 
                 <h2>Example</h2>
                 <p><strong>Input:</strong></p>
-                <p>repository = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]<br/>
-                customerQuery = "mouse"</p>
+                <p>repository = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]<br />
+                    customerQuery = "mouse"</p>
                 <p><strong>Output:</strong></p>
                 <p>
-                [
+                    [
                     ["mobile", "moneypot", "monitor"],
                     ["mouse", "mousepad"],
                     ["mouse", "mousepad"],
                     ["mouse", "mousepad"],
                     ["mouse", "mousepad"]
-                ]
+                    ]
                 </p>
                 <h2>Explanation</h2>
                 <p>The chain of words that will generate in the search box will be mo, mou, mous, mouse.</p>
@@ -48,19 +48,19 @@ export default function SearchSuggestionPage(){
             </div>
             <div className="answerContainer">
                 <input
-                    value={query} 
-                    onChange={(e)=>handelInputChange(e)}
+                    value={query}
+                    onChange={(e) => handelInputChange(e)}
                 />
                 <ul>
                     {
-                        result.map(x=><li>{x}</li>)
+                        result.map(x => <li>{x}</li>)
                     }
                 </ul>
             </div>
         </div>
     )
 
-    function handelInputChange(event){
+    function handelInputChange(event) {
         setQuery(event.target.value);
         const result = searchSuggestions(repository, event.target.value)
         setResult(result)
@@ -68,10 +68,10 @@ export default function SearchSuggestionPage(){
 
     // const repository =  ["mobile", "mouse", "moneypot", "monitor", "mousepad"];
     // customerQuery = "mouse"
-    function searchSuggestions(repository, customerQuery){
-        if(customerQuery.length >= 2){
+    function searchSuggestions(repository, customerQuery) {
+        if (customerQuery.length >= 2) {
             //const result =
-        }else{
+        } else {
             return [];
         }
     }
