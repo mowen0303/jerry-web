@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Nav from './share/nav.component';
 
 //1. 导入新的文件
@@ -13,16 +12,16 @@ import TotalSalaryPage from './pages/scotiabankTotalSalary.page';
 const router = createBrowserRouter(
   [
     {
-      path:'/',
-      element: <App/>
+      path: '/',
+      element: <SearchSuggestionPage />
     },
     {
-      path:'/searchSuggestion',
-      element: <SearchSuggestionPage/>
+      path: '/searchSuggestion',
+      element: <SearchSuggestionPage />
     },
     {
-      path:'/totalSalary',
-      element: <TotalSalaryPage/>
+      path: '/totalSalary',
+      element: <TotalSalaryPage />
     }
   ]
 )
@@ -31,9 +30,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div className='page-container'>
-      
+
       <div className='nav-container'>
-        <Nav/>
+        <Nav />
       </div>
 
       <div className='content-container'>
