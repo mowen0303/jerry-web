@@ -67,3 +67,11 @@ code {
 .content-container {
    flex:8
 }
+
+body pre {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: 'Courier New, monospace';
+}

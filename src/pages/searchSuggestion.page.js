@@ -66,23 +66,31 @@ export default function SearchSuggestionPage() {
 
                 <h2>Example</h2>
                 <p><strong>Input:</strong></p>
-                <p>repository = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]<br />
-                    customerQuery = "mouse"</p>
+                <pre>
+                    <code>
+                    {`
+                    repository = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]
+                    customerQuery = "mouse"`}
+                    </code>
+                
+                </pre>
                 <p><strong>Output:</strong></p>
-                <code>
-                    {
-                    `
-                    [
-                        ["mobile", "moneypot", "monitor"],
-                        ["mouse", "mousepad"],
-                        ["mouse", "mousepad"],
-                        ["mouse", "mousepad"],
-                        ["mouse", "mousepad"]
-                    ]
-                    `
-                    }
-                    
-                </code>
+                <pre>
+                    <code>
+                        {
+                        `
+                        [
+                            ["mobile", "moneypot", "monitor"],
+                            ["mouse", "mousepad"],
+                            ["mouse", "mousepad"],
+                            ["mouse", "mousepad"],
+                            ["mouse", "mousepad"]
+                        ]
+                        `
+                        }
+                        
+                    </code>
+                </pre>
                 <h2>Explanation</h2>
                 <p>The chain of words that will generate in the search box will be mo, mou, mous, mouse.</p>
                 <p>And each line from the output shows the suggestion of "mo", "mou", "mous", "mouse" respectively in each line.</p>
